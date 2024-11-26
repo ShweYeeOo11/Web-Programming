@@ -1,6 +1,37 @@
-<html>
-  <head><title>My GitHub Page</title></head>
-  <body>
-    <h1>Welcome to My GitHub Pages Site</h1>
-  </body>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>감정 기반 음악</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>감정 기반 음악</h1>
+        <p>현재 감정에 맞는 음악을 선택해보세요!</p>
+    </header>
+    <main>
+        <section id="emotion-selector">
+            <h2>감정을 선택하세요</h2>
+            <div class="buttons">
+                <button class="emotion" data-emotion="happy">😊 행복</button>
+                <button class="emotion" data-emotion="sad">😢 슬픔</button>
+                <button class="emotion" data-emotion="energetic">💪 활기</button>
+                <button class="emotion" data-emotion="relaxed">😌 편안</button>
+            </div>
+        </section>
+        <section id="playlist">
+            <h2>추천 음악</h2>
+            <div id="songs">
+                <!-- 감정별 추천 음악 리스트가 여기에 동적으로 추가됩니다 -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 감정 기반 음악 프로젝트</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
 </html>
+
