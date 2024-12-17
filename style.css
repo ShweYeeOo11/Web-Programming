@@ -1,94 +1,199 @@
-/* 전체 스타일 */
+/* Login Page Styling */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #6f99b3;
+    color: white;
+    text-align: center;
+    padding: 20px; /* Add padding for spacing */
+}
+
+.login-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px; /* Add space between heading and paragraph */
+}
+
+.login-container p {
+    font-size: 1.2rem;
+    margin-bottom: 20px; /* Add space between paragraph and form */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Space between input fields */
+}
+
+input, button {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    width: 250px; /* Make inputs consistent in width */
+    text-align: center; /* Center the placeholder and text inside inputs */
+}
+
+button {
+    background: #0073e6;
+    color: white;
+    cursor: pointer;
+    width: 250px;
+}
+
+button:hover {
+    background: #005bb5;
+}
+
+/* General Styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-    text-align: center;
+    background: #6f99b3; /* Dark theme */
+    color: white;
 }
 
-/* 헤더 스타일 */
+/* Header Styling */
 header {
-    background-color: #343a40;
+    background: url('img/Header.jpg') no-repeat center center/cover;
+    height: 70vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     color: white;
-    padding: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.header-content {
+    margin-top: 0;
 }
 
 header h1 {
+    font-size: 3.5rem;
     margin: 0;
-    font-size: 2.5rem;
+    padding: 0;
 }
 
 header p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-top: 0.5rem;
 }
 
-/* 감정 선택 섹션 스타일 */
-#emotion-selector {
-    margin: 2rem 0;
+/* Search Bar Styling */
+.search-container {
+    text-align: center;
+    margin: 20px 0;
 }
 
-.buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-button {
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
+#search-bar {
+    width: 60%;
+    padding: 10px;
+    font-size: 1rem;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
-    background-color: #f0f0f0;
-    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #ddd;
+/* Music List Container */
+.music-list-container {
+    margin: 20px 0;
+    padding: 20px;
 }
 
-/* 추천 음악 섹션 스타일 */
-#playlist {
-    margin: 2rem 0;
-    padding: 1rem;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.music-list-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
-#songs {
-    margin-top: 2rem;
+.music-list {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px;
 }
 
-.song {
-    margin: 1rem;
-    padding: 1rem;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: left;
+.music-list-item {
+    background-color: rgba(34, 34, 34, 0.8); /* Semi-transparent dark background */
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    min-width: 200px;
+    flex: 0 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-.song h3 {
-    margin: 0;
+
+.music-list-item-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 8px; /* Ensure image matches the container rounding */
+    margin-bottom: 10px; /* Add space between image and text */
+    border: 2px solid transparent; /* Add optional image border */
+    transition: transform 0.3s, border-color 0.3s; /* Smooth hover animation */
+}
+
+.music-list-item-img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    border-color: rgba(255, 255, 255, 0.5); /* Highlight border on hover */
+}
+
+
+.music-list-item-title {
     font-size: 1.2rem;
-    color: #333;
-}
-
-.song p {
-    margin: 0.5rem 0 0;
-    color: #666;
-    font-size: 1rem;
-}
-
-/* 푸터 스타일 */
-footer {
-    background-color: #343a40;
     color: white;
-    padding: 1rem;
-    margin-top: 2rem;
+    text-decoration: none; /* Remove underline from links */
+    margin: 10px 0;
+    display: block; /* Ensure title spans full width */
+}
+
+.music-list-item-title:hover {
+    color: #0073e6; /* Change color on hover */
+}
+
+.music-list-item-desc {
+    font-size: 1rem;
+    color: #aaa;
+}
+
+/* Playlist Item */
+.playlist-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #652828;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Delete Button */
+.delete-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.delete-button:hover {
+    background-color: #cc0000;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #222;
+    color: #aaa;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
 }
