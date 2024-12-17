@@ -1,37 +1,57 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>감정 기반 음악</title>
+    <title>Emotion Melody | Music by Emotion</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
-        <h1>감정 기반 음악</h1>
-        <p>현재 감정에 맞는 음악을 선택해보세요!</p>
+    <<header>
+        <div class="header-content">
+            <h1>Welcome to Emotion Melody</h1>
+            <p>Your mood, your music.</p>
+        </div>
     </header>
+    
+        <!-- Main Content -->
     <main>
-        <section id="emotion-selector">
-            <h2>감정을 선택하세요</h2>
-            <div class="buttons">
-                <button class="emotion" data-emotion="happy">😊 행복</button>
-                <button class="emotion" data-emotion="sad">😢 슬픔</button>
-                <button class="emotion" data-emotion="energetic">💪 활기</button>
-                <button class="emotion" data-emotion="relaxed">😌 편안</button>
-            </div>
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Search for a song or artist..." oninput="filterSongs()">
+        </div>
+
+        <!-- Happy Music Section -->
+        <section id="happy-music" class="music-list-container">
+            <h1 class="music-list-title">Happy Songs</h1>
         </section>
-        <section id="playlist">
-            <h2>추천 음악</h2>
-            <div id="songs">
-                <!-- 감정별 추천 음악 리스트가 여기에 동적으로 추가됩니다 -->
-            </div>
+
+        <!-- Sad Music Section -->
+        <section id="sad-music" class="music-list-container">
+            <h1 class="music-list-title">Sad Songs</h1>
+        </section>
+
+        <!-- Energetic Music Section -->
+        <section id="energetic-music" class="music-list-container">
+            <h1 class="music-list-title">Energetic Songs</h1>
+        </section>
+
+        <!-- Relaxed Music Section -->
+        <section id="relaxed-music" class="music-list-container">
+            <h1 class="music-list-title">Relaxed Songs</h1>
+        </section>
+       
+        <!-- Playlist Section -->
+        <section id="playlist-section" class="music-list-container">
+            <h1 class="music-list-title">My Playlist</h1>
+            <div id="playlist-container"></div>
         </section>
     </main>
+
     <footer>
-        <p>&copy; 2024 감정 기반 음악 프로젝트</p>
+        <p>&copy; 2024 Emotion Melody</p>
     </footer>
-    <script src="script.js"></script>
 </body>
 </html>
 
